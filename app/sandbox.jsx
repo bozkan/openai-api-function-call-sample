@@ -75,7 +75,7 @@ export default function Sandbox() {
 
         if(isMounted) {
 
-            setFuncType(storedMode)
+            setFuncType(1)
             setMessageItems(storedMessages)
 
         }
@@ -394,29 +394,9 @@ export default function Sandbox() {
     return (
         <div className={classes.container}>
             <div className={classes.main}>
-                <div className={classes.header}>
-                    <FormControl fullWidth>
-                        <Select
-                        disabled={loading || !isMounted}
-                        value={funcType}
-                        onChange={handleChangeFunction}
-                        renderValue={(value) => (
-                            <React.Fragment>
-                                <span className={classes.name}>{FunctionTypes[value].name}</span>
-                                <span className={classes.desc}>{FunctionTypes[value].description}</span>
-                            </React.Fragment>
-                        )}
-                        >
-                            {
-                                FunctionTypes.map((item, index) => {
-                                    return (
-                                        <MenuItem key={index} value={index}>{ item.name }</MenuItem>
-                                    )
-                                })
-                            }
-                        </Select>
-                    </FormControl>
-                </div>
+
+                <img src="logoWithText.png" alt="RoboMinder Logo" width={200} height={30}/>
+    
                 <div ref={messageRef} className={classes.messages}>
                     {
                         messageItems.map((item) => {
@@ -454,7 +434,7 @@ export default function Sandbox() {
                             <ResetIcon />
                         </Fab>
                     </div>
-                    <div className={classes.input}>
+                    <div className={classes.input}x>
                         <NoSsr>
                             <Box 
                             component="form" 
@@ -462,7 +442,7 @@ export default function Sandbox() {
                             noValidate>
                                 <TextField 
                                 autoFocus={true}
-                                placeholder={`Send message`}
+                                placeholder={`Type your message...`}
                                 disabled={loading}
                                 fullWidth
                                 //multiline

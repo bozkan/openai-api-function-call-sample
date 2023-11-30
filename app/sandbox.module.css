@@ -5,6 +5,7 @@
 
 .main {
     position: relative;
+    background-color: #0F182B;
     height: 100%;
     /*flex-shrink: 0;*/
 }
@@ -31,12 +32,9 @@
 }
 
 .messages {
-    background-color: #fff;
-    /*position: relative;*/
-    /*margin-top: 80px;*/
+    background-color: #0F182B;
     position: absolute;
     left: 0;
-    top: 80px;
     width: 100%;
     height: calc(100% - 150px); /*120*/
     overflow-y: auto;
@@ -83,7 +81,7 @@
     width: 70px;
 }
 .input {
-    /*background-color: palevioletred;*/
+    background-color: white;
     /*margin: 1rem 1rem 3rem 1rem;*/
     width: calc(100% - 90px);
 }

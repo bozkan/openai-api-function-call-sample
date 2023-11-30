@@ -5,8 +5,8 @@ export const metadata = {
     description: 'A sample React app built using Next.JS powered by OpenAI API',
     viewport: 'maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, width=device-width, user-scalable=0',
     icons: {
-        icon: '/logo192.png',
-        shortcut: '/logo192.png',
+        icon: '/logo.png',
+        shortcut: '/logo.png',
     }
 }
 
