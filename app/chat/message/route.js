@@ -8,7 +8,8 @@ import get_hotel from '../../../lib/get_hotel.json'
 import reserve_hotel from '../../../lib/reserve_hotel.json'
 import get_reservation from '../../../lib/get_reservation.json'
 
-export const maxDuration = 90
+export const dynamic = 'force-dynamic'
+export const maxDuration = 60
 
 export async function POST(request) {
 

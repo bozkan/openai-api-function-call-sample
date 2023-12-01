@@ -11,7 +11,8 @@ import {
 import { wait } from '../../../lib/utils'
 import { callMockAPI } from '../../../lib/mockapi'
 
-export const maxDuration = 90
+export const dynamic = 'force-dynamic'
+export const maxDuration = 60
 
 export async function POST(request) {
 

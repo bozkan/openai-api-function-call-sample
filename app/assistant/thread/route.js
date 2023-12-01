@@ -1,6 +1,7 @@
 import { deleteThread } from '../../../service/openai'
 
-export const maxDuration = 90
+export const dynamic = 'force-dynamic'
+export const maxDuration = 60
 
 export async function POST(request) {
 
