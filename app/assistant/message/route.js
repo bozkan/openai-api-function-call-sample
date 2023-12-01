@@ -11,6 +11,8 @@ import {
 import { wait } from '../../../lib/utils'
 import { callMockAPI } from '../../../lib/mockapi'
 
+export const maxDuration = 90
+
 export async function POST(request) {
 
     const { inquiry, threadId, messageId } = await request.json()

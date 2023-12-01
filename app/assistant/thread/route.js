@@ -1,5 +1,7 @@
 import { deleteThread } from '../../../service/openai'
 
+export const maxDuration = 90
+
 export async function POST(request) {
 
     const { threadId } = await request.json()
