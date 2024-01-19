@@ -10,7 +10,7 @@ import reserve_hotel from '../../../lib/reserve_hotel.json'
 import get_reservation from '../../../lib/get_reservation.json'
 
 export const dynamic = 'force-dynamic'
-export const maxDuration = 60
+export const maxDuration = 10
 
 export async function POST(request) {
 
