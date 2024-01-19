@@ -8,7 +8,7 @@ const nextConfig = {
     return config
   },
   env: {
-    siteTitle: 'OpenAI API - Function Call Sample',
+    siteTitle: 'Robominder AI Assistant',
   },
   trailingSlash: true,
   experimental: {

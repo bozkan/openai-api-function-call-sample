@@ -395,7 +395,7 @@ export default function Sandbox() {
         <div className={classes.container}>
             <div className={classes.main}>
 
-                <img src="logoWithText.png" alt="RoboMinder Logo" width={200} height={30}/>
+                <img className={classes.logo} src="logoWithText.png" alt="RoboMinder Logo" width={200} height={30}/>
     
                 <div ref={messageRef} className={classes.messages}>
                     {
@@ -438,6 +438,7 @@ export default function Sandbox() {
                         <NoSsr>
                             <Box 
                             component="form" 
+                            className={classes.box}
                             onSubmit={handleSubmit}
                             noValidate>
                                 <TextField 

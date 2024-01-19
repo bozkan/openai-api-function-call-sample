@@ -42,7 +42,7 @@
     z-index: 1;
 }
 .message {
-    padding: 1rem 1rem 0 1rem;
+    padding: 20px 20px 0 20px;
     display: flex;
 }
 .message:last-child {
@@ -54,7 +54,12 @@
     width: 100%;
     padding: 1rem;
     margin: 0;
+    margin-left: 20px;
     /*white-space: pre-wrap;*/
+}
+.text p {
+    margin-block-start: .4em;
+    margin-block-end: .4em;
 }
 .text img {
     width: 80%;
@@ -63,6 +68,8 @@
 }
 .message:nth-child(odd) .text {
     background-color: #efefef;
+    margin-left: 0;
+    margin-right: 20px;
 }
 
 .chat {
@@ -70,11 +77,11 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: calc(100% - 20px);
     z-index: 5;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 .tool {
     /*background-color: aquamarine;*/
@@ -82,10 +89,19 @@
 }
 .input {
     background-color: white;
+    border-radius: 15px;
     /*margin: 1rem 1rem 3rem 1rem;*/
     width: calc(100% - 90px);
 }
 
 .loader {
     padding: 1rem 0;
+}
+
+.logo {
+    margin: 20px;
+}
+
+.box {
+    border-radius: 15px;
 }
