@@ -65,6 +65,11 @@ export default function Sandbox() {
     const [isDialogShown, setDialogShown] = React.useState(false)
     const [selFuncType, setSelFuncType] = React.useState(0)
     
+    const firstMsg = {
+        "role": "assistant",
+        "content": "How may I assist you with programming or maintaining FANUC industrial robots? If you have any questions or if there are issues you're encountering, feel free to let me know."
+    };
+    
     React.useEffect(() => {
 
         setMounted(true)
@@ -76,12 +81,7 @@ export default function Sandbox() {
         if(isMounted) {
 
             setFuncType(1)
-            if (storedMessages.length === 0) {
-                storedMessages.push({
-                    "role": "assistant",
-                    "content": "How may I assist you with programming or maintaining FANUC industrial robots? If you have any questions or if there are issues you're encountering, feel free to let me know."
-                })
-            }
+            storedMessages.unshift(firstMsg)
             setMessageItems(storedMessages)
 
         }
@@ -385,7 +385,14 @@ export default function Sandbox() {
 
         }
 
-        setMessageItems([])
+        setMessageItems([]);
+        setLoading(true);
+        
+        setTimeout(() => {
+            setLoading(false);
+            setMessageItems([firstMsg]);
+        }, 1000)
+
         clearMessages()
 
     }
