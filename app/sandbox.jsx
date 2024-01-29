@@ -86,6 +86,7 @@ export default function Sandbox() {
 
             // Check if the browser supports the Web App Install Prompt API
             if ('getInstalledRelatedApps' in window.navigator) {
+                alert("yes")
                 // Check if the web app is not installed
                 window.addEventListener('beforeinstallprompt', (event) => {
                 // Prevent the default browser prompt
@@ -97,6 +98,7 @@ export default function Sandbox() {
                 // Display a custom message asking the user to add to home screen
                 const promptMessage = "Add this web app to your home screen for quick access?";
                 if (window.confirm(promptMessage)) {
+
                     // Trigger the browser's installation prompt
                     installPromptEvent.prompt();
                     
