@@ -97,9 +97,7 @@ export default function Sandbox() {
                 // Display a custom message asking the user to add to home screen
                 const promptMessage = "Add this web app to your home screen for quick access?";
                 if (window.confirm(promptMessage)) {
-
-                    alert("yes")
-
+                    
                     // Trigger the browser's installation prompt
                     installPromptEvent.prompt();
                     
