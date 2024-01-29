@@ -84,6 +84,34 @@ export default function Sandbox() {
             }
             setMessageItems(storedMessages)
 
+            // Check if the browser supports the Web App Install Prompt API
+            if ('getInstalledRelatedApps' in window.navigator) {
+                // Check if the web app is not installed
+                window.addEventListener('beforeinstallprompt', (event) => {
+                // Prevent the default browser prompt
+                event.preventDefault();
+                
+                // Store the event for later use
+                const installPromptEvent = event;
+        
+                // Display a custom message asking the user to add to home screen
+                const promptMessage = "Add this web app to your home screen for quick access?";
+                if (window.confirm(promptMessage)) {
+                    // Trigger the browser's installation prompt
+                    installPromptEvent.prompt();
+                    
+                    // Wait for the user to interact with the prompt
+                    installPromptEvent.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    } else {
+                        console.log('User dismissed the install prompt');
+                    }
+                    });
+                }
+                });
+            }
+
         }
 
     }, [isMounted])

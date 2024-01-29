@@ -1,4 +1,5 @@
-import Sandbox from "./sandbox"
+import Head from 'next/head';
+import Sandbox from './sandbox';
 
 export const metadata = {
     title: process.env.siteTitle,
@@ -7,9 +8,22 @@ export const metadata = {
     icons: {
         icon: '/logo.png',
         shortcut: '/logo.png',
-    }
+    },
+    manifestUrl: '/manifest.json', // Add your manifest URL here
+    appleTouchIconUrl: '/logo.png', // Add your apple-touch-icon URL here
 }
 
 export default function Page() {
-    return <Sandbox />
+    return (
+        <div>
+            <Head>
+                <title>{metadata.title}</title>
+                <meta name="description" content={metadata.description} />
+                <link rel="manifest" href={metadata.manifestUrl} /> {/* Add manifest link */}
+                <link rel="apple-touch-icon" href={metadata.appleTouchIconUrl} /> {/* Add apple-touch-icon link */}
+                {/* Add other meta tags and links as needed */}
+            </Head>
+            <Sandbox />
+        </div>
+    );
 }
