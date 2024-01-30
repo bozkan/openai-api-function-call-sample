@@ -435,10 +435,7 @@ export default function Sandbox() {
 
     return (
         <div className={classes.container}>
-            <div className={classes.main}>
-
-                <img className={classes.logo} src="logoWithText.png" alt="RoboMinder Logo" width={200} height={30}/>
-    
+            <div className={classes.main}>    
                 <div ref={messageRef} className={classes.messages}>
                     {
                         messageItems.map((item) => {
@@ -487,6 +484,7 @@ export default function Sandbox() {
                                 autoFocus={true}
                                 placeholder={`Type your message...`}
                                 disabled={loading}
+                                className={classes.inputField}
                                 fullWidth
                                 //multiline
                                 //maxRows={4}

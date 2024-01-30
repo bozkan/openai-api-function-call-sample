@@ -10,10 +10,7 @@ const nextConfig = {
   env: {
     siteTitle: 'Robominder AI Assistant',
   },
-  trailingSlash: true,
-  experimental: {
-      appDir: true,
-  },
+  trailingSlash: true
 };
   
 module.exports = nextConfig;
