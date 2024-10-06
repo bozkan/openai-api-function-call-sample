@@ -67,7 +67,7 @@ export default function Sandbox() {
     
     const firstMsg = {
         "role": "assistant",
-        "content": "How may I assist you with fixing your Fairphone 4?"
+        "content": "How may I assist you with fixing the screen of your Fairphone 4?"
     };
     
     React.useEffect(() => {
