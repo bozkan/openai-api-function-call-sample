@@ -7,7 +7,7 @@ import '@fontsource/roboto/700.css'
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='ja' style={{ 'fontSize': '14px' }} >
+    <html lang='ja' style={{ 'fontSize': '14px', 'background-color': '#10172A' }} >
       <body>{children}</body>
     </html>
   )

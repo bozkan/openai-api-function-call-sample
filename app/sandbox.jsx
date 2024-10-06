@@ -436,6 +436,7 @@ export default function Sandbox() {
     return (
         <div className={classes.container}>
             <div className={classes.main}>    
+                <h1 className={classes.title}>AI-FIXER</h1>
                 <div ref={messageRef} className={classes.messages}>
                     {
                         messageItems.map((item) => {

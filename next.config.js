@@ -8,7 +8,7 @@ const nextConfig = {
     return config
   },
   env: {
-    siteTitle: 'AI Fixer',
+    siteTitle: 'AI-Fixer',
   },
   trailingSlash: true
 };
