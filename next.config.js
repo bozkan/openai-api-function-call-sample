@@ -8,7 +8,7 @@ const nextConfig = {
     return config
   },
   env: {
-    siteTitle: 'Robominder AI Assistant',
+    siteTitle: 'AI Fixer',
   },
   trailingSlash: true
 };
