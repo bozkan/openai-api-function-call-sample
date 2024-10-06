@@ -67,7 +67,7 @@ export default function Sandbox() {
     
     const firstMsg = {
         "role": "assistant",
-        "content": "How may I assist you with programming or maintaining FANUC industrial robots? If you have any questions or if there are issues you're encountering, feel free to let me know."
+        "content": "How may I assist you with fixing your Fairphone 4?"
     };
     
     React.useEffect(() => {

@@ -1,7 +1,7 @@
 {
-  "name": "openai-api-function-call-sample",
+  "name": "ai-fixer",
   "version": "0.0.2",
-  "description": "A sample React app built using Next.JS powered by OpenAI API",
+  "description": "Chatbot app using OpenAI Assistant API to repair items",
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
